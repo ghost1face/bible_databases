@@ -63862,7 +63862,7 @@
 
 **[1:25]** to God our Savior, who alone is wise, be glory and majesty, dominion and power, both now and forever. Amen. 
 
-## Revelation
+## Revelation of John
 
 ### Chapter 1
 

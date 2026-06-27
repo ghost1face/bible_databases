@@ -90,7 +90,7 @@ INSERT INTO `WEB_books` (`name`) VALUES ('I John');
 INSERT INTO `WEB_books` (`name`) VALUES ('II John');
 INSERT INTO `WEB_books` (`name`) VALUES ('III John');
 INSERT INTO `WEB_books` (`name`) VALUES ('Jude');
-INSERT INTO `WEB_books` (`name`) VALUES ('Revelation');
+INSERT INTO `WEB_books` (`name`) VALUES ('Revelation of John');
 
             CREATE TABLE `WEB_verses` (
                 `id` INT AUTO_INCREMENT PRIMARY KEY,

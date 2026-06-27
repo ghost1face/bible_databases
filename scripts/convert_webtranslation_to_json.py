@@ -94,6 +94,10 @@ def filename_to_book_name(stem: str) -> str:
     if stem in MULTI_WORD_BOOKS:
         return MULTI_WORD_BOOKS[stem]
 
+    # For consistency, map "revelation" to "Revelation of John"
+    if stem == "revelation":
+        return "Revelation of John"
+
     match = re.match(r"^(\d+)(.+)$", stem)
     if match:
         number = int(match.group(1))
