@@ -148,6 +148,7 @@ See the simple [DOCUMENTATION](https://github.com/scrollmapper/bible_databases/b
 - **VulgSistine (la)**: VulgSistine: Vulgata Sistina
 - **Vulgate (la)**: Vulgate: Latin Vulgate
 - **WLC (hbo)**: WLC: Westminster Leningrad Codex
+- **WEB (en)**: WEB: World English Bible
 - **Webster (en)**: Webster: Webster Bible
 - **Wulfila (got)**: Wulfila: Bishop Wulfila Gothic Bible
 - **Wycliffe (enm)**: Wycliffe: John Wycliffe Bible (c.1395)

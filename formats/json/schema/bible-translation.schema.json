@@ -1,0 +1,94 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://github.com/scrollmapper/bible_databases/formats/json/schema/bible-translation.schema.json",
+    "title": "Bible Translation",
+    "description": "Schema for a complete Bible translation exported to JSON. Each file contains one translation with its books, chapters, and verses.",
+    "type": "object",
+    "required": [
+        "translation",
+        "books"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "translation": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Translation identifier and title, typically formatted as \"CODE: Full Title\" (for example, \"AKJV: American King James Version\")."
+        },
+        "books": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Ordered list of biblical books included in this translation. The number of books varies by canon (for example, 39 for Hebrew Bible, 66 for Protestant canon, or more when deuterocanonical books are included).",
+            "items": {
+                "$ref": "#/$defs/book"
+            }
+        }
+    },
+    "$defs": {
+        "book": {
+            "type": "object",
+            "required": [
+                "name",
+                "chapters"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Display name of the biblical book (for example, \"Genesis\" or \"Revelation of John\")."
+                },
+                "chapters": {
+                    "type": "array",
+                    "minItems": 1,
+                    "description": "Ordered list of chapters in this book.",
+                    "items": {
+                        "$ref": "#/$defs/chapter"
+                    }
+                }
+            }
+        },
+        "chapter": {
+            "type": "object",
+            "required": [
+                "chapter",
+                "verses"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "chapter": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "Chapter number within the book."
+                },
+                "verses": {
+                    "type": "array",
+                    "minItems": 1,
+                    "description": "Ordered list of verses in this chapter.",
+                    "items": {
+                        "$ref": "#/$defs/verse"
+                    }
+                }
+            }
+        },
+        "verse": {
+            "type": "object",
+            "required": [
+                "verse",
+                "text"
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "verse": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "description": "Verse number within the chapter."
+                },
+                "text": {
+                    "type": "string",
+                    "description": "Verse text as exported from the source translation."
+                }
+            }
+        }
+    }
+}

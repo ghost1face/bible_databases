@@ -66,7 +66,13 @@ the `sword_to_json.py` script on the `<translation>.zip` file.
 > **NOTE:** The process can crash depending on how well the actual sword_to_json packages works on a given .zip. Generally it seems
 to run well, but be warned. 
 
-## Step Seven: Check the `<translation>.json` file...
+## Step Seven: Run scripts/convert_webtranslation_to_json.py
+
+Now we run `python convert_webtranslation_to_json.py` in the `scripts` directory.
+
+This will create the `WEB.json` translation file.
+
+## Step Eight: Check the `<translation>.json` file
 
 Check to see that the conversion went well in a text document. If all went well, you should see the JSON object populated with text.
 > **NOTE** some translations can have missing books / chapters / verses. Common cases is translations where either old testament or new testament is left out.
