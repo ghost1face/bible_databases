@@ -12,7 +12,7 @@ See the simple [DOCUMENTATION](https://github.com/scrollmapper/bible_databases/b
 > **⚠️ Important: The legacy version of this project is available on the [2024](https://github.com/scrollmapper/bible_databases/tree/2024) branch. Please note that significant changes to the database schema have been implemented in the 2025 branch and subsequent versions.**
 
 
-## Available Translations (140)
+## Available Translations (141)
 
 - **ACV (en)**: ACV: A Conservative Version
 - **AKJV (en)**: AKJV: American King James Version
@@ -147,8 +147,8 @@ See the simple [DOCUMENTATION](https://github.com/scrollmapper/bible_databases/b
 - **VulgHetzenauer (la)**: VulgHetzenauer: Vulgata Clementina, Hetzenauer editore
 - **VulgSistine (la)**: VulgSistine: Vulgata Sistina
 - **Vulgate (la)**: Vulgate: Latin Vulgate
-- **WLC (hbo)**: WLC: Westminster Leningrad Codex
 - **WEB (en)**: WEB: World English Bible
+- **WLC (hbo)**: WLC: Westminster Leningrad Codex
 - **Webster (en)**: Webster: Webster Bible
 - **Wulfila (got)**: Wulfila: Bishop Wulfila Gothic Bible
 - **Wycliffe (enm)**: Wycliffe: John Wycliffe Bible (c.1395)

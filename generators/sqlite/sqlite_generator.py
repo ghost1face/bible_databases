@@ -41,7 +41,7 @@ class SQLiteGenerator:
 
         # Insert books
         for book in prepared_data['books']:
-            cursor.execute(f"INSERT INTO {translation}_books (name) VALUES (?);", (book['name'],))
+            cursor.execute(f"INSERT INTO {translation}_books (name) SELECT ? WHERE NOT EXISTS (SELECT 1 FROM {translation}_books WHERE name = ?);", (book['name'], book['name']))
 
         # Create verses table
         cursor.execute(f"""
@@ -60,9 +60,10 @@ class SQLiteGenerator:
             for chapter in book['chapters']:
                 for verse in chapter['verses']:
                     cursor.execute(f"""
-                    INSERT INTO {translation}_verses (book_id, chapter, verse, text)
-                    VALUES (?, ?, ?, ?);
-                    """, (book_index, chapter['chapter'], verse['verse'], verse['text']))
+                    INSERT OR IGNORE INTO {translation}_verses (book_id, chapter, verse, text)
+                    SELECT ?, ?, ?, ? 
+                    WHERE NOT EXISTS (SELECT 1 FROM {translation}_verses WHERE book_id = ? AND chapter = ? AND verse = ?);
+                    """, (book_index, chapter['chapter'], verse['verse'], verse['text'], book_index, chapter['chapter'], verse['verse']))
 
         conn.commit()
         conn.close()

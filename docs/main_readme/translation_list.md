@@ -1,4 +1,4 @@
-## Available Translations (140)
+## Available Translations (141)
 
 - **ACV (en)**: ACV: A Conservative Version
 - **AKJV (en)**: AKJV: American King James Version
@@ -133,6 +133,7 @@
 - **VulgHetzenauer (la)**: VulgHetzenauer: Vulgata Clementina, Hetzenauer editore
 - **VulgSistine (la)**: VulgSistine: Vulgata Sistina
 - **Vulgate (la)**: Vulgate: Latin Vulgate
+- **WEB (en)**: WEB: World English Bible
 - **WLC (hbo)**: WLC: Westminster Leningrad Codex
 - **Webster (en)**: Webster: Webster Bible
 - **Wulfila (got)**: Wulfila: Bishop Wulfila Gothic Bible
